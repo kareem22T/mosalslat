@@ -1,0 +1,243 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('./images/main.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 84px);
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px 20px 20px;
+    background-image: url('./images/header-bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 9999999999999;
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    max-width: 500px;
+    transform: translateX(-50%);
+}
+
+.header img {
+    width: 180px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 300px;
+    gap: 16px;
+    margin: 0 auto;
+    margin-top: 68px;
+}
+
+.serias-grid {
+    display: grid;
+    grid-template-columns:  1fr;
+    width: 100%;
+    max-width: 450px;
+    gap: 16px;
+    margin: 0 auto;
+    margin-top: 116px;
+    padding: 0 16px;
+}
+
+.card {
+    width: 100%;
+    height: 130px;
+    padding: 32px 16px;
+    border-radius: 12px;
+    background-color: #ffffffc2;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.footer {
+    font-size: 11px;
+    padding: 16px 16px 10px;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.514) 0%, rgba(0,0,0,0) 100%); 
+    font-family: "Cairo", serif;
+    color: #fff;
+    text-align: center;
+    margin-top: 24px;
+}
+
+
+.serias-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px 20px 20px;
+    background-image: url('./images/card-bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 22;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.serias-card .img {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #eda362;
+    width: 100px;
+    height: 100px;
+}
+
+.serias-card svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    stroke: #fff;
+    padding: 28px;
+    background: #00000070;
+}
+
+.serias-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.serias-card p {
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+    font-family: "Cairo", serif;
+}
+.serias-card h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #eda362;
+    font-weight: bold;
+    font-family: "Cairo", serif;
+}
+
+.serias-card .text {
+    text-align: center;
+    line-height: 22px;
+    padding: 12px 16px;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 10px;
+}
+
+.filter svg {
+    stroke: white;
+    width: 26px;
+    height: 26px;
+    margin-left: 12px;
+}
+
+.filter .left, .filter .right {
+    display: flex;
+    align-items: center;
+}
+
+.filter .btns {
+    gap: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.filter button, .filter select{
+    min-width: 70px;
+    padding: 4px 8px;
+    background: #2b2b2b;
+    border: none;
+    color: white;
+    font-family: Cairo;
+    border-radius: 4px;
+}
+
+.filter button.active {
+    background-color: #eda362;
+}
+
+/* Add this to your existing CSS file */
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#youtubeIframe {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .popup-content {
+        width: 95%;
+    }
+}
+
+.program {
+    display: none;
+}
