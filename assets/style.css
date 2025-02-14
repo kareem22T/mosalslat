@@ -45,13 +45,25 @@ body {
 }
 
 .cards-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    grid-template-columns: 1fr;
     width: 100%;
-    max-width: 300px;
+    max-width: 150px;
     gap: 16px;
-    margin: 0 auto;
-    margin-top: 68px;
+    margin-top: 54px;
+    flex-direction: column;
+}
+.cards-grid:nth-child(2) .card:first-child {
+    height: 160px;
+    padding-top: 62px;
+}
+.main-grid {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    gap: 16px;
+    align-items: start;
+    margin: 0;
 }
 
 .serias-grid {
