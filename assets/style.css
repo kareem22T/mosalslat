@@ -135,7 +135,6 @@ body {
     top: 16px;
     left: 50%;
     transform: translateX(-50%);
-    overflow: hidden;
     border-radius: 50%;
     border: 2px solid #eda362;
     width: 100px;
@@ -144,12 +143,13 @@ body {
 
 .serias-card .img .serias-title {
     position: absolute;
-    top: -10px;
+    top: -16px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 14px;
     color: #fff;
     text-align: center;
+    white-space: nowrap;
 }
 
 .serias-card svg {
