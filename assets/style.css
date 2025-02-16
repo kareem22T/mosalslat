@@ -130,6 +130,10 @@ body {
     margin-bottom: 40px;
 }
 
+.has-sub {
+    margin-bottom: 80px;
+}
+
 .serias-card .img {
     position: absolute;
     top: 32px;
@@ -150,6 +154,20 @@ body {
     color: #fff;
     text-align: center;
     white-space: nowrap;
+}
+
+.serias-card .img .sub-title {
+    font-size: 14px;
+    background-color: #0000003f;
+    white-space: nowrap;
+    width: max-content;
+    padding: 4px;
+    margin-top: 8px;
+    border-radius: 8px;
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .serias-card svg {
@@ -186,9 +204,12 @@ body {
 .serias-card .text {
     text-align: center;
     line-height: 22px;
-    padding: 12px 16px;
+    padding: 12px 0px;
 }
 
+.serias-card .text.agin h2 {
+    font-size: 16px;
+}
 .filter {
     display: flex;
     justify-content: space-between;
